@@ -1,8 +1,67 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [name] = useState('Sanjana Prabhakar');
+  const [name, setName] = useState('Sanjana Prabhakar');
+  const [question, setQuestion] = useState('');
+  const [response, setResponse] = useState('');
+  const [facts, setFacts] = useState([]);
+  const [factIndex, setFactIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
+
+  useEffect(() => {
+    async function loadFacts() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/sp12102001/facts.txt/main/facts.txt');
+        const text = await response.text();
+        const factArray = text.split('\n').filter(fact => fact.trim() !== '');
+        setFacts(factArray);
+      } catch (error) {
+        console.error('Error loading facts:', error);
+      }
+    }
+
+    loadFacts();
+  }, []);
+
+  useEffect(() => {
+    let factInterval;
+    if (loading) {
+      factInterval = setInterval(() => {
+        setFactIndex(prevIndex => (prevIndex + 1) % facts.length);
+      }, 2000);
+    } else {
+      clearInterval(factInterval);
+    }
+    return () => clearInterval(factInterval);
+  }, [loading, facts.length]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch(workerUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question }),
+      });
+      if (!response.ok) {
+        throw new Error(`Error: ${response.statusText}`);
+      }
+      const responseData = await response.json();
+      setResponse(responseData.output ? responseData.output : "No answer available.");
+    } catch (error) {
+      if (error.message.includes('Failed to fetch')) {
+        setResponse('Failed to fetch response. Please ensure third-party cookies are enabled in your browser settings.');
+      } else {
+        setResponse(`Unexpected error: ${error.message}`);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div>
@@ -45,11 +104,27 @@ function App() {
         <section id="chatbot" className="container">
           <h2>Meet My Chatbot</h2>
           <p>Feel free to ask any questions about my qualifications, experience, or skills. The chatbot is here to provide instant responses.</p>
-          <form id="chatbot-form">
-            <input type="text" id="question" name="question" placeholder="Ask me a question..." />
+          <form id="chatbot-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              id="question"
+              name="question"
+              placeholder="Ask me a question..."
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+            />
             <button type="submit">Ask</button>
           </form>
-          <div id="response-container">Enter a question and click 'Ask'</div>
+          <div id="response-container">
+            {loading ? (
+              <div>
+                <span className="loading-bold">Loading... Here are some facts about Sanjana while you wait:</span><br />
+                <span id="fact-container">{facts.length > 0 ? facts[factIndex] : 'Loading facts...'}</span>
+              </div>
+            ) : (
+              <div>{response}</div>
+            )}
+          </div>
           <div className="questions-container mt-3">
             <p className="ask-me">Example Questions</p>
             <ul className="list-style">
@@ -61,7 +136,7 @@ function App() {
         <section id="service-iframe" className="container">
           <h2>My Service</h2>
           <iframe
-            src="https://your-service-url.com"
+            src="https://www.canva.com/design/DAGGVBzzFSw/-ibFvstAA8OUuOvq1oAdhQ/view?utm_content=DAGGVBzzFSw&utm_campaign=designshare&utm_medium=link&utm_source=editor"
             width="100%"
             height="600px"
             frameBorder="0"
@@ -69,7 +144,6 @@ function App() {
             title="Service"
           ></iframe>
         </section>
-
         <section id="contact" className="container">
           <h2>Get in Touch</h2>
           <p>Reach out to discuss how I can contribute</p>
@@ -77,10 +151,8 @@ function App() {
             <li><a href="mailto:sanjana.prabhakar09@gmail.com" target="_blank" tabIndex="0">sanjana.prabhakar09@gmail.com</a></li>
           </ul>
         </section>
-       
       </main>
-    </div>
-  );
+    </div> );
 }
 
 export default App;
