@@ -1,6 +1,4 @@
-/* Global styles */
-
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,8 +15,6 @@ body {
   padding: 20px;
 }
 
-/* Container styles */
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -30,9 +26,8 @@ body {
 }
 
 /* Header styles */
-
 header {
-  background-color: #004080; /* Updated header color */
+  background-color: #004080;
   color: #fff;
   padding: 1.5em;
   text-align: center;
@@ -52,7 +47,6 @@ header h1 {
 }
 
 /* Section styles */
-
 section {
   padding: 2em;
   margin-bottom: 20px;
@@ -73,7 +67,6 @@ section p {
 }
 
 /* Profile links styles */
-
 .profile-links {
   list-style: none;
   padding: 0;
@@ -111,7 +104,6 @@ section p {
 }
 
 /* Chatbot styles */
-
 #chatbot {
   padding: 2em;
   border: 1px solid #ddd;
@@ -163,7 +155,6 @@ section p {
 }
 
 /* Facts rolling styles */
-
 .loading-bold {
   font-weight: bold;
   font-size: 1.2em;
@@ -181,7 +172,6 @@ section p {
 }
 
 /* Questions container styles */
-
 .questions-container {
   margin-top: 30px;
 }
@@ -203,7 +193,6 @@ section p {
 }
 
 /* Services styles */
-
 #services ul {
   list-style: none;
   padding: 0;
@@ -216,7 +205,6 @@ section p {
 }
 
 /* Contact styles */
-
 #contact ul {
   list-style: none;
   padding: 0;
@@ -239,7 +227,6 @@ section p {
 }
 
 /* Iframe section styles */
-
 #service-iframe {
   width: 100%;
   max-width: 1200px;

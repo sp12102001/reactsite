@@ -72,7 +72,7 @@ function App() {
       <main role="main">
         <section id="portfolio" className="container">
           <h2>About Me</h2>
-          <p>Highly motivated individual with a MSc Health Psychology degree and a keen interest in applied technological innovation, fortified by independent initiatives developing and deploying Artificial Intelligence and Machine Learning solutions for diverse uses.</p>
+          <p>Highly motivated individual with an MSc Health Psychology degree and a keen interest in applied technological innovation, fortified by independent initiatives developing and deploying Artificial Intelligence and Machine Learning solutions for diverse uses.</p>
           <ul className="profile-links" aria-label="Profile links">
             <li>
               <a href="https://www.cochrane.org/search/all/sanjana%20prabhakar" target="_blank" tabIndex="0">
@@ -150,7 +150,8 @@ function App() {
           </ul>
         </section>
       </main>
-    </div> );
+    </div>
+  );
 }
 
 export default App;
