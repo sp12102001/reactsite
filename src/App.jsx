@@ -179,14 +179,20 @@ function App() {
           </div>
         </section>
         <section id="service-iframe" className="container">
-          <h2>My Service</h2>
-          <img
-            src="https://raw.githubusercontent.com/SPPROF12/reactsite/c51e59016354502e7e3a7374922c06b85f0475bf/SP_RPA_WORKFLOWS_AIML.png"
-            alt="Service"
-            width="100%"
-            height="600px"
-          />
-        </section>
+  <h2>My Projects</h2>
+  <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '56.25%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
+    <iframe 
+      loading="lazy" 
+      style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }} 
+      src="https://www.canva.com/design/DAGIgjISdQ4/C9e2_hiSv115KyB7dnWT8A/view?embed" 
+      allowFullScreen="allowfullscreen" 
+      allow="fullscreen"
+    ></iframe>
+  </div>
+  <a href="https://www.canva.com/design/DAGIgjISdQ4/C9e2_hiSv115KyB7dnWT8A/view?utm_content=DAGIgjISdQ4&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener noreferrer">
+    Projects by Sanjana Prabhakar
+  </a>
+</section>
         <section id="contact" className="container">
           <h2>Get in Touch</h2>
           <p>Reach out to discuss how I can contribute</p>
