@@ -24,10 +24,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 /* Header styles */
+
 header {
-  background-color: #004080;
+  background-color: #004080; /* Updated header color */
   color: #fff;
   padding: 1.5em;
   text-align: center;
@@ -35,6 +35,9 @@ header {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header h1 {
@@ -44,6 +47,33 @@ header h1 {
 
 #contactInfo {
   font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#contactInfo .static-text {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+#contactInfo .characteristic {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2em; /* Adjust font size as needed */
+  white-space: nowrap;
+}
+
+/* Typing animation */
+.typing {
+  border-right: 2px solid #fff;
+  animation: blinkCursor 0.7s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fff; }
 }
 
 /* Section styles */
