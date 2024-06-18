@@ -131,9 +131,7 @@ section p {
 
 .profile-links img:hover {
   transform: scale(1.1);
-}
-
-/* Chatbot styles */
+}/* Chatbot styles */
 #chatbot {
   padding: 2em;
   border: 1px solid #ddd;
@@ -149,6 +147,7 @@ section p {
 #chatbot h2 {
   font-size: 1.8em;
   margin-bottom: 0.5em;
+  color: #010d19;
 }
 
 #chatbot p {
@@ -158,31 +157,96 @@ section p {
 
 #chatbot form {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #chatbot input[type="text"] {
-  width: 100%;
+  width: 80%;
+  max-width: 800px;
   padding: 20px;
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #chatbot button[type="submit"] {
+  width: 80%;
+  max-width: 200px;
   background-color: #337ab7;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1em;
   transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
 #chatbot button[type="submit"]:hover {
   background-color: #23527c;
 }
+
+#response-container {
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  color: #333;
+  width: 80%;
+  max-width: 500px;
+  text-align: center; /* Centered text */
+}
+
+#response-container.active {
+  display: block; /* Show when active */
+}
+
+/* Questions container */
+.questions-container {
+  margin-top: 30px;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ddd; /* Outline */
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centered text */
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.questions-container .ask-me {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.questions-container ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+
+}
+
+.questions-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  max-width: 800px;
+  color: #333;
+}
+
 
 /* Facts rolling styles */
 .loading-bold {
