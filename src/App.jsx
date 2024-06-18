@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -8,6 +8,11 @@ function App() {
   const [facts, setFacts] = useState([]);
   const [factIndex, setFactIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [currentCharacteristic, setCurrentCharacteristic] = useState('');
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  const [characteristics, setCharacteristics] = useState([]);
 
   const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
 
@@ -23,7 +28,19 @@ function App() {
       }
     }
 
+    async function loadCharacteristics() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/sp12102001/facts.txt/main/characteristics.txt');
+        const text = await response.text();
+        const characteristicArray = text.split('\n').filter(char => char.trim() !== '');
+        setCharacteristics(characteristicArray);
+      } catch (error) {
+        console.error('Error loading characteristics:', error);
+      }
+    }
+
     loadFacts();
+    loadCharacteristics();
   }, []);
 
   useEffect(() => {
@@ -37,6 +54,31 @@ function App() {
     }
     return () => clearInterval(factInterval);
   }, [loading, facts.length]);
+
+  useEffect(() => {
+    if (characteristics.length === 0) return;
+
+    const handleTyping = () => {
+      const current = charIndex % characteristics.length;
+      const fullText = characteristics[current];
+
+      setCurrentCharacteristic((prev) => 
+        isDeleting ? fullText.substring(0, prev.length - 1) : fullText.substring(0, prev.length + 1)
+      );
+
+      if (!isDeleting && currentCharacteristic === fullText) {
+        setTimeout(() => setIsDeleting(true), 3000);
+      } else if (isDeleting && currentCharacteristic === '') {
+        setIsDeleting(false);
+        setCharIndex((prev) => prev + 1);
+      }
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [currentCharacteristic, isDeleting, typingSpeed, characteristics, charIndex]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,14 +107,17 @@ function App() {
 
   return (
     <div>
-      <header role="banner">
-        <h1>{name}</h1>
-        <p id="contactInfo">Personal Profile</p>
-      </header>
+     <header role="banner">
+  <h1>{name}</h1>
+  <p id="contactInfo">
+    <span className="static-text">Is...</span>
+    <span className="characteristic typing">{currentCharacteristic}</span>
+  </p>
+</header>
       <main role="main">
         <section id="portfolio" className="container">
           <h2>About Me</h2>
-          <p>Highly motivated individual with an MSc Health Psychology degree and a keen interest in applied technological innovation, fortified by independent initiatives developing and deploying Artificial Intelligence and Machine Learning solutions for diverse uses.</p>
+          <p>Highly motivated individual with a MSc Health Psychology degree and a keen interest in applied technological innovation, fortified by independent initiatives developing and deploying Artificial Intelligence and Machine Learning solutions for diverse uses.</p>
           <ul className="profile-links" aria-label="Profile links">
             <li>
               <a href="https://www.cochrane.org/search/all/sanjana%20prabhakar" target="_blank" tabIndex="0">
