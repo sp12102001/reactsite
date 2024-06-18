@@ -67,7 +67,7 @@ function App() {
     <div>
       <header role="banner">
         <h1>{name}</h1>
-        <p id="contactInfo">sanjana.prabhakar09@gmail.com</p>
+        <p id="contactInfo">Personal Profile</p>
       </header>
       <main role="main">
         <section id="portfolio" className="container">
@@ -135,11 +135,11 @@ function App() {
         </section>
         <section id="service-iframe" className="container">
           <h2>My Service</h2>
+          
           <iframe
-            src="https://www.canva.com/design/DAGGVBzzFSw/-ibFvstAA8OUuOvq1oAdhQ/view?utm_content=DAGGVBzzFSw&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+            src="https://www.canva.com/design/DAGGVBzzFSw/-ibFvstAA8OUuOvq1oAdhQ/"
             width="100%"
             height="600px"
-            frameBorder="0"
             allowFullScreen
             title="Service"
           ></iframe>
