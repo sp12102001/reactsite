@@ -162,6 +162,26 @@ section p {
   background-color: #23527c;
 }
 
+/* Facts rolling styles */
+
+.loading-bold {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #004080;
+}
+
+#fact-container {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #eef;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Questions container styles */
+
 .questions-container {
   margin-top: 30px;
 }
