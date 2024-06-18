@@ -1,35 +1,36 @@
-name: Deploy React to GitHub Pages
+name: build-and-deploy
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3  # Updated to v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3  # Updated to v3
-        with:
-          node-version: '20'  # Updated to Node.js 20
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
+    - name: Install dependencies
+      run: npm ci
 
-      - name: Build the project
-        run: npm run build
+    - name: Build the project
+      run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
-        with:
-          checkout: true
-          checkout-sparse-checkout-cone-mode: true
-          path: build  # Change 'dist' to 'build' since create-react-app typically uses 'build'
-          install_command: npm ci
-          build_command: npm run build
-          caching: true  # Optional, but recommended to cache node_modules
+    - name: List workspace contents for debugging
+      run: ls -la
+
+    - name: List build directory contents for debugging
+      run: ls -la build
+
+    - name: Deploy to GitHub Pages
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+      with:
+        path: build
