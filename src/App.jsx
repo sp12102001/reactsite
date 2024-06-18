@@ -136,7 +136,7 @@ function App() {
         <section id="service-iframe" className="container">
           <h2>My Service</h2>
           <img
-            src="/SP_RPA_WORKFLOWS_AIML.png"
+            src="https://raw.githubusercontent.com/SPPROF12/reactsite/c51e59016354502e7e3a7374922c06b85f0475bf/SP_RPA_WORKFLOWS_AIML.png"
             alt="Service"
             width="100%"
             height="600px"
