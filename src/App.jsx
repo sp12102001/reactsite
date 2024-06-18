@@ -135,14 +135,12 @@ function App() {
         </section>
         <section id="service-iframe" className="container">
           <h2>My Service</h2>
-          
-          <iframe
-            src="https://www.canva.com/design/DAGGVBzzFSw/-ibFvstAA8OUuOvq1oAdhQ/"
+          <img
+            src="/SP_RPA_WORKFLOWS_AIML.png"
+            alt="Service"
             width="100%"
             height="600px"
-            allowFullScreen
-            title="Service"
-          ></iframe>
+          />
         </section>
         <section id="contact" className="container">
           <h2>Get in Touch</h2>
