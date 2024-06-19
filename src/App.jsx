@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Projects from './Projects'; // Import the Projects component
 
 function App() {
   const [name, setName] = useState('Sanjana Prabhakar');
@@ -179,6 +180,7 @@ function App() {
             </ul>
           </div>
         </section>
+        <Projects />
         <section id="service-iframe" className="container">
           <h2>My Projects</h2>
           <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '56.25%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
