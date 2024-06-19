@@ -298,26 +298,84 @@ section p {
   margin-bottom: 10px;
 }
 
-/* Contact styles */
-#contact ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Contact form styles */
+#contact {
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
   text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-#contact li {
-  margin-bottom: 10px;
+#contact h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #004080;
 }
 
-#contact a {
-  text-decoration: none;
-  color: #337ab7;
-  transition: color 0.3s;
+#contact p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 1.5em;
 }
 
-#contact a:hover {
-  color: #23527c;
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact form div {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#contact label {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 0.5em;
+  display: block;
+  text-align: left;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+#contact textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+#contact button[type="submit"] {
+  width: 50%;
+  max-width: 200px;
+  background-color: #337ab7;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #23527c;
 }
 
 /* Iframe section styles */
@@ -336,3 +394,5 @@ section p {
   border: none;
   border-radius: 8px;
 }
+
+
