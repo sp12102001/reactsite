@@ -13,8 +13,42 @@ function App() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [characteristics, setCharacteristics] = useState([]);
+  
 
   const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
+  
+function App() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => alert('Form successfully submitted'))
+      .catch((error) => alert(error));
+  };
+
+  return (
+    <form name="contact" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  );
+}
 
   useEffect(() => {
     async function loadFacts() {
@@ -204,5 +238,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
