@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,10 +24,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Header styles */
 
 header {
-  background-color: #004080; /* Updated header color */
+  background-color: #004080;
   color: #fff;
   padding: 1.5em;
   text-align: center;
@@ -61,11 +60,10 @@ header h1 {
 #contactInfo .characteristic {
   font-weight: bold;
   color: #fff;
-  font-size: 1.2em; /* Adjust font size as needed */
+  font-size: 1.2em;
   white-space: nowrap;
 }
 
-/* Typing animation */
 .typing {
   border-right: 2px solid #fff;
   animation: blinkCursor 0.7s step-end infinite;
@@ -76,7 +74,6 @@ header h1 {
   50% { border-color: #fff; }
 }
 
-/* Section styles */
 section {
   padding: 2em;
   margin-bottom: 20px;
@@ -96,7 +93,6 @@ section p {
   text-align: center;
 }
 
-/* Profile links styles */
 .profile-links {
   list-style: none;
   padding: 0;
@@ -131,7 +127,8 @@ section p {
 
 .profile-links img:hover {
   transform: scale(1.1);
-}/* Chatbot styles */
+}
+
 #chatbot {
   padding: 2em;
   border: 1px solid #ddd;
@@ -193,7 +190,7 @@ section p {
 }
 
 #response-container {
-  display: none; /* Initially hidden */
+  display: none;
   margin-top: 20px;
   padding: 15px;
   border: 1px solid #ddd;
@@ -204,23 +201,22 @@ section p {
   color: #333;
   width: 80%;
   max-width: 500px;
-  text-align: center; /* Centered text */
+  text-align: center;
 }
 
 #response-container.active {
-  display: block; /* Show when active */
+  display: block;
 }
 
-/* Questions container */
 .questions-container {
   margin-top: 30px;
   max-width: 800px;
   padding: 20px;
-  border: 1px solid #ddd; /* Outline */
+  border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centered text */
+  text-align: center;
   width: 80%;
   max-width: 500px;
   margin: 20px auto;
@@ -236,19 +232,14 @@ section p {
 .questions-container ul {
   list-style: none;
   padding: 0;
-  max-width: 800px;
-
 }
 
 .questions-container ul li {
   margin-bottom: 10px;
   font-size: 1.1em;
-  max-width: 800px;
   color: #333;
 }
 
-
-/* Facts rolling styles */
 .loading-bold {
   font-weight: bold;
   font-size: 1.2em;
@@ -265,40 +256,6 @@ section p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Questions container styles */
-.questions-container {
-  margin-top: 30px;
-}
-
-.questions-container .ask-me {
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.questions-container ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-.questions-container ul li {
-  margin-bottom: 10px;
-}
-
-/* Services styles */
-#services ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-#services li {
-  margin-bottom: 10px;
-}
-
-/* Contact form styles */
 #contact {
   padding: 2em;
   border: 1px solid #ddd;
@@ -378,7 +335,6 @@ section p {
   background-color: #23527c;
 }
 
-/* Iframe section styles */
 #service-iframe {
   width: 100%;
   max-width: 1200px;
@@ -394,5 +350,3 @@ section p {
   border: none;
   border-radius: 8px;
 }
-
-
