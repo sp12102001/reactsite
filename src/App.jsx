@@ -15,7 +15,6 @@ function App() {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [characteristics, setCharacteristics] = useState([]);
   
-
   const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
 
   useEffect(() => {
@@ -181,20 +180,16 @@ function App() {
           </div>
         </section>
         <projects />
-<section id="service-iframe" className="container">
-  <h2>My Projects</h2>
-  <iframe
-    loading="lazy"
-    style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; padding: 0; margin: 0; object-fit: cover;"
-    src="https://sp12102001.github.io/my-projects/"
-    allowFullScreen="allowfullscreen"
-    allow="fullscreen"
-  ></iframe>
-  <a href="https://sp12102001.github.io/my-projects/" target="_blank" rel="noopener noreferrer">
-    Projects by Sanjana Prabhakar
-  </a>
+      <section id="service-iframe" className="container">
+      <h2>My Projects</h2>
+      <iframe
+      loading="lazy"
+        style="position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; padding: 0; margin: 0; object-fit: cover;"
+        src="https://sp12102001.github.io/my-projects/"
+        allowFullScreen="allowfullscreen"
+        allow="fullscreen" ></iframe>
+        <a href="https://sp12102001.github.io/my-projects/" target="_blank" rel="noopener noreferrer"> Projects by Sanjana Prabhakar</a>
 </section>
-
         <section id="contact" className="container">
           <h2>Get in Touch</h2>
           <p>Reach out to discuss potential collaborations or opportunities</p>
@@ -219,5 +214,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
