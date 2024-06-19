@@ -183,13 +183,13 @@ function App() {
         <projects />
 <section id="service-iframe" className="container">
   <h2>My Projects</h2>
-    <iframe 
-      loading="lazy" 
-      style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0, transform: 'scale(0.85)', transformOrigin: '0 0' }} 
-      src="https://sp12102001.github.io/my-projects/" 
-      allowFullScreen="allowfullscreen" 
-      allow="fullscreen"
-    ></iframe>
+  <iframe
+  loading="lazy"
+  style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; object-fit: cover;"
+  src="https://sp12102001.github.io/my-projects/"
+  allowFullScreen="allowfullscreen"
+  allow="fullscreen"
+></iframe>
   </div>
   <a href="https://sp12102001.github.io/my-projects/" target="_blank" rel="noopener noreferrer">
     Projects by Sanjana Prabhakar
