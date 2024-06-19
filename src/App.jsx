@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import projects from 'src/projects.jsx'; // Import the Projects component
+import projects from './projects.jsx'; // Import the Projects component
 
 function App() {
   const [name, setName] = useState('Sanjana Prabhakar');
