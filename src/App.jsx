@@ -63,7 +63,7 @@ function App() {
       const current = charIndex % characteristics.length;
       const fullText = characteristics[current];
 
-      setCurrentCharacteristic((prev) => 
+      setCurrentCharacteristic((prev) =>
         isDeleting ? fullText.substring(0, prev.length - 1) : fullText.substring(0, prev.length + 1)
       );
 
@@ -73,13 +73,13 @@ function App() {
         setIsDeleting(false);
         setCharIndex((prev) => prev + 1);
       }
-
       setTypingSpeed(isDeleting ? 30 : 150);
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
   }, [currentCharacteristic, isDeleting, typingSpeed, characteristics, charIndex]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
