@@ -16,39 +16,6 @@ function App() {
   
 
   const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
-  
-function App() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => alert('Form successfully submitted'))
-      .catch((error) => alert(error));
-  };
-
-  return (
-    <form name="contact" onSubmit={handleSubmit}>
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>Name: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-  );
-}
 
   useEffect(() => {
     async function loadFacts() {
@@ -227,17 +194,25 @@ function App() {
     Projects by Sanjana Prabhakar
   </a>
 </section>
-        <section id="contact" className="container">
-          <h2>Get in Touch</h2>
-          <p>Reach out to discuss how I can contribute</p>
-          <ul>
-            <li><a href="mailto:sanjana.prabhakar09@gmail.com" target="_blank" tabIndex="0">sanjana.prabhakar09@gmail.com</a></li>
-          </ul>
-        </section>
-      </main>
+<section id="contact" className="container">
+  <h2>Get in Touch</h2>
+  <p>Reach out to discuss how I can contribute</p>
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+    <div>
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" name="name" required />
     </div>
-  );
-}
-
+    <div>
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label htmlFor="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
 export default App;
