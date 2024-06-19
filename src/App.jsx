@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Projects from './projects.jsx'; // Import the Projects component
+
 function App() {
   const [name, setName] = useState('Sanjana Prabhakar');
   const [question, setQuestion] = useState('');
