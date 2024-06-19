@@ -183,10 +183,10 @@ function App() {
         <projects />
 <section id="service-iframe" className="container">
   <h2>My Projects</h2>
-  <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '56.25%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform', transform: 'scale(0.85)', transformOrigin: '0 0' }}>
+  <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '56.25%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
     <iframe 
       loading="lazy" 
-      style={{ position: 'absolute', width: '118%', height: '118%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }} 
+      style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0, transform: 'scale(0.85)', transformOrigin: '0 0' }} 
       src="https://sp12102001.github.io/my-projects/" 
       allowFullScreen="allowfullscreen" 
       allow="fullscreen"
@@ -196,6 +196,7 @@ function App() {
     Projects by Sanjana Prabhakar
   </a>
 </section>
+
         <section id="contact" className="container">
           <h2>Get in Touch</h2>
           <p>Reach out to discuss potential collaborations or opportunities</p>
