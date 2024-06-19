@@ -1,7 +1,7 @@
 import React from 'react';
 import './projects.css'; // Assuming you have a CSS file for Projects-specific styles
 
-function Projects() {
+function projects() {
   return (
     <section id="projects" className="container">
       <h2>My Projects</h2>
@@ -156,4 +156,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default projects;
