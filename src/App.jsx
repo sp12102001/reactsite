@@ -80,10 +80,10 @@ function App() {
     return () => clearTimeout(timer);
   }, [currentCharacteristic, isDeleting, typingSpeed, characteristics, charIndex]);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setResponse(''); // Reset response on new query
     try {
       const response = await fetch(workerUrl, {
         method: 'POST',
@@ -108,13 +108,13 @@ function App() {
 
   return (
     <div>
-     <header role="banner">
-      <h1>{name}</h1>
-      <p id="contactInfo">
-        <span className="static-text">Is...</span>
-        <span className="characteristic typing">{currentCharacteristic}</span>
-      </p>
-    </header>
+      <header role="banner">
+        <h1>{name}</h1>
+        <p id="contactInfo">
+          <span className="static-text">Is...</span>
+          <span className="characteristic typing">{currentCharacteristic}</span>
+        </p>
+      </header>
       <main role="main">
         <section id="portfolio" className="container">
           <h2>About Me</h2>
@@ -161,10 +161,10 @@ function App() {
             />
             <button type="submit">Ask</button>
           </form>
-          <div id="response-container">
+          <div id="response-container" className={loading || response ? 'active' : ''}>
             {loading ? (
               <div>
-                <span className="loading-bold">Loading... Here are some facts about Sanjana while you wait:</span><br />
+                <span className="loading-bold">Loading... Here are some facts about Sanju while you wait:</span><br />
                 <span id="fact-container">{facts.length > 0 ? facts[factIndex] : 'Loading facts...'}</span>
               </div>
             ) : (
