@@ -1,0 +1,34 @@
+/* Projects section styles */
+#projects {
+  padding: 2em;
+  margin-bottom: 20px;
+}
+
+#projects h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+  text-align: center;
+}
+
+#projects .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+#projects .card:hover {
+  transform: translateY(-10px);
+}
+
+#projects .pinned-item-desc {
+  font-size: 1em;
+  color: #666;
+}
+
+#projects .octicon {
+  fill: #333;
+}
