@@ -4,24 +4,10 @@ function Projects() {
 const projectData = [
     {
       name: 'Systematic-Synthesizer',
-      description: 'Automates the systematic review process using NLP, ML, and data extraction techniques.',
+      description: 'Automates the systematic review research process using NLP, ML, and data extraction techniques.',
       repoUrl: 'https://github.com/sp12102001/Systematic-Synthesizer',
       imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/systematic-synthesizer.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
-    },
-    {
-      name: 'Tax-Questions-Bot',
-      description: 'A web-based tool to help individuals in Singapore with tax-related queries.',
-      repoUrl: 'https://github.com/sp12102001/Tax-Questions-Bot',
-      imageUrl: 'https://github.com/sp12102001/Tax-Questions-Bot/raw/main/preview.png',
-      builtWith: 'JavaScript, Node, Bootstrap '
-    },
-    {
-      name: 'API Query Framework',
-      description: 'Framework for creating a static website that makes API queries using JavaScript and integrates ChatGPT.',
-      repoUrl: 'https://github.com/sp12102001/api-query-framework',
-      imageUrl: 'https://github.com/sp12102001/api-query-framework/raw/main/preview.png',
-      builtWith: 'JavaScript, HTML, CSS'
     },
     {
       name: 'Network Me',
@@ -31,18 +17,25 @@ const projectData = [
       builtWith: 'JavaScript, React.js, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: 'Research Agent AI',
-      description: 'Autonomously conducts research to write systematic review structured scientific papers.',
+      name: 'IntelAgent: Competitor Analysis on Autopilot',
+      description: 'Autonomously conducts real-time market research and produces structured competitor analysis reports.',
       repoUrl: 'https://github.com/sp12102001/research-agent-ai',
       imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: '"Intellimail" - An AI-Powered Email Marketing Platform',
+      name: '"Intellimail" - Email Campaigns Automated',
       description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
       repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
       imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
+    },
+    {
+      name: 'Tax-Questions-Bot',
+      description: 'A web-based tool to help individuals in Singapore with tax-related queries.',
+      repoUrl: 'https://github.com/sp12102001/Tax-Questions-Bot',
+      imageUrl: 'https://github.com/sp12102001/Tax-Questions-Bot/raw/main/preview.png',
+      builtWith: 'JavaScript, Node, Bootstrap '
     },
     {
       name: 'Are You Smarter Than A (Computer-Simulated) 5th Grader?',
@@ -57,7 +50,15 @@ const projectData = [
       repoUrl: 'https://github.com/sp12102001/Apology-Support-AI',
       imageUrl: 'https://github.com/sp12102001/Apology-Support-AI/raw/main/preview.png',
       builtWith: 'JavaScript, HTML, CSS, Node'
+    },
+    {
+      name: 'API Query Framework',
+      description: 'Framework for creating a static website that makes API queries using JavaScript and integrates ChatGPT.',
+      repoUrl: 'https://github.com/sp12102001/api-query-framework',
+      imageUrl: 'https://github.com/sp12102001/api-query-framework/raw/main/preview.png',
+      builtWith: 'JavaScript, HTML, CSS'
     }
+    
   ];
 
   return (
