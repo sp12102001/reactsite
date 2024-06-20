@@ -1,12 +1,12 @@
 import './Projects.css'; // Assuming you have a CSS file for Projects-specific styles
 
 function Projects() {
-  const projectData = [
+const projectData = [
     {
       name: 'Systematic-Synthesizer',
       description: 'Automates the systematic review process using NLP, ML, and data extraction techniques.',
       repoUrl: 'https://github.com/sp12102001/Systematic-Synthesizer',
-      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/preview.gif',
+      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/systematic-synthesizer.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
@@ -14,7 +14,7 @@ function Projects() {
       description: 'A web-based tool to help individuals in Singapore with tax-related queries.',
       repoUrl: 'https://github.com/sp12102001/Tax-Questions-Bot',
       imageUrl: 'https://github.com/sp12102001/Tax-Questions-Bot/raw/main/preview.png',
-      builtWith: 'JavaScript'
+      builtWith: 'JavaScript, Node, Bootstrap '
     },
     {
       name: 'API Query Framework',
@@ -27,21 +27,21 @@ function Projects() {
       name: 'Network Me',
       description: 'Starting framework for an auth-included social media application.',
       repoUrl: 'https://github.com/sp12102001/network-me',
-      imageUrl: 'https://github.com/sp12102001/network-me/raw/main/preview.png',
-      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
+      imageUrl: 'https://github.com/sp12102001/network-me/raw/main/network-me.gif',
+      builtWith: 'JavaScript, React.js, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
       name: 'Research Agent AI',
       description: 'Autonomously conducts research to write systematic review structured scientific papers.',
       repoUrl: 'https://github.com/sp12102001/research-agent-ai',
-      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.png',
+      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
       name: '"Intellimail" - An AI-Powered Email Marketing Platform',
       description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
       repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
-      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.png',
+      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
