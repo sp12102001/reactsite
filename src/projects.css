@@ -11,24 +11,65 @@
   text-align: center;
 }
 
-#projects .card {
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 15px;
   transition: transform 0.3s;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-#projects .card:hover {
+.card:hover {
   transform: translateY(-10px);
 }
 
-#projects .pinned-item-desc {
-  font-size: 1em;
-  color: #666;
+.card-content {
+  padding: 10px;
 }
 
-#projects .octicon {
-  fill: #333;
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.built-with {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
 }
