@@ -1,4 +1,3 @@
-import React from 'react';
 import './projects.css'; // Assuming you have a CSS file for Projects-specific styles
 
 function Projects() {
@@ -7,7 +6,7 @@ function Projects() {
       name: 'Systematic-Synthesizer',
       description: 'Automates the systematic review process using NLP, ML, and data extraction techniques.',
       repoUrl: 'https://github.com/sp12102001/Systematic-Synthesizer',
-      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/systematic-synthesizer.gif',
+      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/preview.png',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
@@ -35,19 +34,19 @@ function Projects() {
       name: 'Research Agent AI',
       description: 'Autonomously conducts research to write systematic review structured scientific papers.',
       repoUrl: 'https://github.com/sp12102001/research-agent-ai',
-      imageUrl: 'https://github.com/sp12102001/research-agent-ai/raw/main/preview.png',
+      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.png',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: 'AI-Powered Email Marketing Platform',
-      description: 'AI optimizes email campaigns with features like subject line generation and content personalization.',
+      name: '"Intellimail" - An AI-Powered Email Marketing Platform',
+      description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
       repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
-      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/preview.png',
+      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.png',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: 'Python Game',
-      description: 'A Python-based interactive maths game where the human plays against the computer.',
+      name: 'Are You Smarter Than A (Computer-Simulated) 5th Grader?',
+      description: 'A Python-based interactive quiz gameshow simulation in the style of "Are You Smarter Than A 5th Grader"  - Human versus computer.',
       repoUrl: 'https://github.com/sp12102001/python-game',
       imageUrl: 'https://github.com/sp12102001/python-game/raw/main/preview.png',
       builtWith: 'Python'
@@ -64,15 +63,17 @@ function Projects() {
   return (
     <section id="projects" className="container">
       <h2>My Projects</h2>
-      <div className="projects-grid">
+      <div className="projects-carousel">
         {projectData.map((project, index) => (
           <div key={index} className="card">
             <img src={project.imageUrl} alt={`${project.name} preview`} className="project-image" />
             <div className="card-content">
               <h3>{project.name}</h3>
               <p className="description">{project.description}</p>
-              <p className="built-with"><strong>Built With:</strong> {project.builtWith}</p>
               <a href={project.repoUrl} className="btn" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+            </div>
+            <div className="overlay">
+              <p className="built-with"><strong>Built With:</strong> {project.builtWith}</p>
             </div>
           </div>
         ))}
@@ -82,3 +83,4 @@ function Projects() {
 }
 
 export default Projects;
+
