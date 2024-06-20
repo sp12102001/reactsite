@@ -70,7 +70,7 @@ function Projects() {
             <div className="card-content">
               <h3>{project.name}</h3>
               <p className="description">{project.description}</p>
-              <a href={project.repoUrl} className="btn" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
+              <a href={project.repoUrl} className="btn" target="_blank" rel="noopener noreferrer">View On GitHub</a>
             </div>
             <div className="overlay">
               <p className="built-with"><strong>Built With:</strong> {project.builtWith}</p>
