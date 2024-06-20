@@ -202,42 +202,12 @@ section p {
   width: 80%;
   max-width: 500px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #response-container.active {
   display: block;
-}
-
-.questions-container {
-  margin-top: 30px;
-  max-width: 800px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-.questions-container .ask-me {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #004080;
-}
-
-.questions-container ul {
-  list-style: none;
-  padding: 0;
-}
-
-.questions-container ul li {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-  color: #333;
 }
 
 .loading-bold {
