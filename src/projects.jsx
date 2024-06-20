@@ -1,4 +1,4 @@
-import './projects.css'; // Assuming you have a CSS file for Projects-specific styles
+import './Projects.css'; // Assuming you have a CSS file for Projects-specific styles
 
 function Projects() {
   const projectData = [
