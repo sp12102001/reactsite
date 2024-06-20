@@ -6,7 +6,7 @@ function Projects() {
       name: 'Systematic-Synthesizer',
       description: 'Automates the systematic review process using NLP, ML, and data extraction techniques.',
       repoUrl: 'https://github.com/sp12102001/Systematic-Synthesizer',
-      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/preview.png',
+      imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/preview.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
