@@ -1,0 +1,55 @@
+#portfolio {
+    padding: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  #portfolio p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  .profile-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .profile-links li {
+    margin: 10px;
+  }
+  
+  .profile-links a {
+    text-decoration: none;
+    color: #337ab7;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-links a:hover {
+    color: #23527c;
+  }
+  
+  .profile-links img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .profile-links img:hover {
+    transform: scale(1.1);
+  }
+  
