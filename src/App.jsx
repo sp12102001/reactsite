@@ -80,10 +80,10 @@ function App() {
     return () => clearTimeout(timer);
   }, [currentCharacteristic, isDeleting, typingSpeed, characteristics, charIndex]);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setResponse(''); // Reset response on new query
     try {
       const response = await fetch(workerUrl, {
         method: 'POST',
@@ -164,19 +164,12 @@ function App() {
           <div id="response-container" className={loading || response ? 'active' : ''}>
             {loading ? (
               <div>
-                <span className="loading-bold">Loading... Here are some facts about Sanju while you wait:</span><br />
+                <span className="loading-bold">Loading... Here are some facts about Sanjana while you wait:</span><br />
                 <span id="fact-container">{facts.length > 0 ? facts[factIndex] : 'Loading facts...'}</span>
               </div>
             ) : (
               <div>{response}</div>
             )}
-          </div>
-          <div className="questions-container mt-3">
-            <p className="ask-me">Example Questions</p>
-            <ul className="list-style">
-              <li>Why should I hire Sanjana over other candidates for a [NAME OF ROLE] position?</li>
-              <li>What is Sanjana's experience with [SPECIFIC SKILL]?</li>
-            </ul>
           </div>
         </section>
         <Projects />
