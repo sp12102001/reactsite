@@ -34,19 +34,19 @@ function Projects() {
       name: 'Research Agent AI',
       description: 'Autonomously conducts research to write systematic review structured scientific papers.',
       repoUrl: 'https://github.com/sp12102001/research-agent-ai',
-      imageUrl: 'https://github.com/sp12102001/research-agent-ai/raw/main/preview.png',
+      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.png',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: 'AI-Powered Email Marketing Platform',
-      description: 'AI optimizes email campaigns with features like subject line generation and content personalization.',
+      name: '"Intellimail" - An AI-Powered Email Marketing Platform',
+      description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
       repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
-      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/preview.png',
+      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.png',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
-      name: 'Python Game',
-      description: 'A Python-based interactive maths game where the human plays against the computer.',
+      name: 'Are You Smarter Than A (Computer-Simulated) 5th Grader?',
+      description: 'A Python-based interactive quiz gameshow simulation in the style of "Are You Smarter Than A 5th Grader"  - Human versus computer.',
       repoUrl: 'https://github.com/sp12102001/python-game',
       imageUrl: 'https://github.com/sp12102001/python-game/raw/main/preview.png',
       builtWith: 'Python'
