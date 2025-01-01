@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import Projects from './projects.jsx'; // Import the Projects component
+import Projects from './Projects.jsx'; // Import the Projects component
 import Header from './Header.jsx';
 import About from './About.jsx';
 import Chatbot from './Chatbot.jsx';
