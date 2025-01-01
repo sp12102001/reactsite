@@ -5,7 +5,8 @@ function About() {
   return (
     <section id="portfolio" className="container">
       <h2>About Me</h2>
-      <p>Highly motivated individual with a MSc Health Psychology degree and a keen interest in applied technological innovation, fortified by independent initiatives developing and deploying Artificial Intelligence and Machine Learning solutions for diverse uses.</p>
+      <p>I am a highly motivated professional with a background in research, data analysis, and project management. My passion lies in harnessing emerging technologies to drive innovation and efficiency, and I bring diverse experience in developing and implementing technology-driven solutions both independently and collaboratively. I am eager to apply my skills and experiences to roles where I can continue to learn, develop, and contribute meaningfully.
+</p>
       <ul className="profile-links" aria-label="Profile links">
         <li>
           <a href="https://www.cochrane.org/search/all/sanjana%20prabhakar" target="_blank" tabIndex="0">
@@ -28,9 +29,10 @@ function About() {
           </a>
         </li>
         <li>
-          <a href="https://www.canva.com/design/DAGFtZn32A8/Q746clk3DSci-xuC-F-39w/view?utm_content=DAGFtZn32A8&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" tabIndex="0">
-            <img src="https://cdn-icons-png.flaticon.com/512/2099/2099107.png" alt="Download My Resume" />
-          </a>
+  <a href="https://sanjanap.tiiny.site/" target="_blank" tabIndex="0">
+    <img src="https://cdn-icons-png.flaticon.com/512/909/909212.png" alt="Download My Resume" />
+  </a>
+</li>
         </li>
       </ul>
     </section>
