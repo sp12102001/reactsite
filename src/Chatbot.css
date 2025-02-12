@@ -49,8 +49,8 @@
 }
 
 #chatbot button[type="submit"] {
-  width: 80%;
-  max-width: 200px;
+  width: 50%;
+  max-width: 300px;
   background-color: #337ab7;
   color: #fff;
   padding: 15px;
@@ -102,4 +102,12 @@
   background-color: #eef;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#chatbot-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }

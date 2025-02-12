@@ -43,20 +43,24 @@ function Chatbot() {
     try {
       const response = await fetch(workerUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({ question }),
       });
+
       if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
       }
+
       const responseData = await response.json();
-      setResponse(responseData.output ? responseData.output : "No answer available.");
+      setResponse(responseData.output || "Answer not available. Please try rephrasing your question.");
+
     } catch (error) {
-      if (error.message.includes('Failed to fetch')) {
-        setResponse('Failed to fetch response. Please ensure third-party cookies are enabled in your browser settings.');
-      } else {
-        setResponse(`Unexpected error: ${error.message}`);
-      }
+      console.error('Chatbot error:', error);
+      setResponse(`Error: ${error.message}. Please ensure CORS is enabled and try again.`);
     } finally {
       setLoading(false);
     }
