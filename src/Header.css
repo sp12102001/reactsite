@@ -1,49 +1,143 @@
 header {
-    background-color: #004080;
-    color: #fff;
-    padding: 1.5em;
-    text-align: center;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: linear-gradient(135deg, #1a2a3a, #2980b9, #3498db);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  padding: 3.5em 2em;
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15), transparent 70%);
+  pointer-events: none;
+  animation: shine 8s infinite;
+}
+
+@keyframes shine {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+header h1 {
+  font-size: 4.2em;
+  margin-bottom: 0.3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% center; }
+  100% { background-position: 100% center; }
+}
+
+#contactInfo {
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5em;
+}
+
+#contactInfo .static-text {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contactInfo .characteristic {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.5em;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 0.2em 0;
+  transition: all 0.3s ease;
+}
+
+.typing {
+  border-right: 3px solid rgba(255, 255, 255, 0.9);
+  animation: blinkCursor 0.8s step-end infinite;
+  padding-right: 4px;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: rgba(255, 255, 255, 0.9); }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2.5em 1.5em;
+    margin: 15px auto 25px;
+    border-radius: 20px;
   }
-  
+
   header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 3em;
+    letter-spacing: -0.5px;
   }
-  
+
   #contactInfo {
     font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    white-space: nowrap;
+    margin-top: 0.3em;
   }
-  
-  #contactInfo .static-text {
-    font-size: 1.2em;
-    margin-bottom: 0.2em;
-  }
-  
+
   #contactInfo .characteristic {
-    font-weight: bold;
-    color: #fff;
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 2em 1em;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  #contactInfo .characteristic {
     font-size: 1.2em;
-    white-space: nowrap;
   }
-  
-  .typing {
-    border-right: 2px solid #fff;
-    animation: blinkCursor 0.7s step-end infinite;
-  }
-  
-  @keyframes blinkCursor {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #fff; }
-  }
-  
+}

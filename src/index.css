@@ -71,6 +71,7 @@ h1 {
   text-align: center;
   font-weight: 700;
   background: linear-gradient(135deg, var(--color-scheme-dark), var(--link-color));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
