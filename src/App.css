@@ -19,10 +19,10 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 20px 0;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -319,4 +319,10 @@ section p {
   width: 100%;
   border: none;
   border-radius: 8px;
+}
+
+/* Fix chatbot container conflict */
+#chatbot.container {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border: 1px solid #dee2e6;
 }

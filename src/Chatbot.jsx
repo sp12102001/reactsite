@@ -7,22 +7,25 @@ function Chatbot() {
   const [facts, setFacts] = useState([]);
   const [factIndex, setFactIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const workerUrl = 'https://moi.sp12.workers.dev/'; // Cloudflare Worker URL
 
   useEffect(() => {
+    let isMounted = true;
     async function loadFacts() {
       try {
         const response = await fetch('https://raw.githubusercontent.com/sp12102001/facts.txt/main/facts.txt');
+        if (!response.ok) throw new Error('Failed to load facts');
         const text = await response.text();
         const factArray = text.split('\n').filter(fact => fact.trim() !== '');
-        setFacts(factArray);
+        if (isMounted) setFacts(factArray);
       } catch (error) {
-        console.error('Error loading facts:', error);
+        if (isMounted) console.error('Error loading facts:', error);
       }
     }
-
     loadFacts();
+    return () => { isMounted = false };
   }, []);
 
   useEffect(() => {
@@ -39,7 +42,10 @@ function Chatbot() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!question.trim()) return;
+
     setLoading(true);
+    setError(null);
     try {
       const response = await fetch(workerUrl, {
         method: 'POST',
@@ -47,20 +53,26 @@ function Chatbot() {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({ question }),
+        body: JSON.stringify({ question: question.trim() }),
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        throw new Error(`Server error: ${response.status} - ${errorText}`);
       }
 
       const responseData = await response.json();
-      setResponse(responseData.output || "Answer not available. Please try rephrasing your question.");
+      const validResponse = typeof responseData?.output === 'string'
+        ? responseData.output
+        : "I'm still learning! Please try rephrasing your question.";
+
+      setResponse(validResponse);
+      setQuestion('');
 
     } catch (error) {
       console.error('Chatbot error:', error);
-      setResponse(`Error: ${error.message}. Please ensure CORS is enabled and try again.`);
+      setError(error.message);
+      setResponse('Sorry, there was an error processing your question. Please try again.');
     } finally {
       setLoading(false);
     }
