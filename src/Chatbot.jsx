@@ -95,12 +95,20 @@ function Chatbot() {
       </form>
       <div id="response-container" className={loading || response ? 'active' : ''}>
         {loading ? (
-          <div>
-            <span className="loading-bold">Loading... Here are some facts about Sanjana while you wait:</span><br />
-            <span id="fact-container">{facts.length > 0 ? facts[factIndex] : 'Loading facts...'}</span>
+          <div className="loading-bold">
+            <span>Analyzing your question</span>
+            <div className="dot-pulse" style={{ fontSize: '24px' }}>...</div>
+            {facts.length > 0 && (
+              <div id="fact-container">
+                {facts[factIndex]}
+              </div>
+            )}
           </div>
         ) : (
-          <div>{response}</div>
+          <>
+            {response}
+            {error && <div className="error-message">{error}</div>}
+          </>
         )}
       </div>
     </section>
