@@ -1,33 +1,12 @@
 import './Projects.css'; // Assuming you have a CSS file for Projects-specific styles
 
 function Projects() {
-const projectData = [
+  const projectData = [
     {
       name: 'Systematic-Synthesizer',
-      description: 'Automates the systematic review research process using NLP, ML, and data extraction techniques.',
+      description: 'Automates the systematic review process using NLP, ML, and data extraction techniques.',
       repoUrl: 'https://github.com/sp12102001/Systematic-Synthesizer',
       imageUrl: 'https://github.com/sp12102001/Systematic-Synthesizer/raw/main/systematic-synthesizer.gif',
-      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
-    },
-    {
-      name: 'Network Me',
-      description: 'Starting framework for an auth-included social media application.',
-      repoUrl: 'https://github.com/sp12102001/network-me',
-      imageUrl: 'https://github.com/sp12102001/network-me/raw/main/network-me.gif',
-      builtWith: 'JavaScript, React.js, HTML, CSS, jQuery, Bootstrap, Node'
-    },
-    {
-      name: 'IntelAgent: Competitor Analysis on Autopilot',
-      description: 'Autonomously conducts real-time market research and produces structured competitor analysis reports.',
-      repoUrl: 'https://github.com/sp12102001/research-agent-ai',
-      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.gif',
-      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
-    },
-    {
-      name: '"Intellimail" - Email Campaigns Automated',
-      description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
-      repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
-      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.gif',
       builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
@@ -35,7 +14,35 @@ const projectData = [
       description: 'A web-based tool to help individuals in Singapore with tax-related queries.',
       repoUrl: 'https://github.com/sp12102001/Tax-Questions-Bot',
       imageUrl: 'https://github.com/sp12102001/Tax-Questions-Bot/raw/main/preview.png',
-      builtWith: 'JavaScript, Node, Bootstrap '
+      builtWith: 'JavaScript'
+    },
+    {
+      name: 'API Query Framework',
+      description: 'Framework for creating a static website that makes API queries using JavaScript and integrates ChatGPT.',
+      repoUrl: 'https://github.com/sp12102001/api-query-framework',
+      imageUrl: 'https://github.com/sp12102001/api-query-framework/raw/main/preview.png',
+      builtWith: 'JavaScript, HTML, CSS'
+    },
+    {
+      name: 'Network Me',
+      description: 'Starting framework for an auth-included social media application.',
+      repoUrl: 'https://github.com/sp12102001/network-me',
+      imageUrl: 'https://github.com/sp12102001/network-me/raw/main/network-me.gif',
+      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
+    },
+    {
+      name: 'Research Agent AI',
+      description: 'Autonomously conducts research to write systematic review structured scientific papers.',
+      repoUrl: 'https://github.com/sp12102001/research-agent-ai',
+      imageUrl: 'https://github.com/sp12102001/facts.txt/raw/main/research-agent-ai.gif',
+      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
+    },
+    {
+      name: '"Intellimail" - An AI-Powered Email Marketing Platform',
+      description: 'AI-enabled email marketing platform that optimizes drip campaigns through customer usage analysis and automated personalization ',
+      repoUrl: 'https://github.com/sp12102001/ai-email-marketing',
+      imageUrl: 'https://github.com/sp12102001/ai-email-marketing/raw/main/intellimail.gif',
+      builtWith: 'JavaScript, HTML, CSS, jQuery, Bootstrap, Node'
     },
     {
       name: 'Are You Smarter Than A (Computer-Simulated) 5th Grader?',
@@ -50,15 +57,7 @@ const projectData = [
       repoUrl: 'https://github.com/sp12102001/Apology-Support-AI',
       imageUrl: 'https://github.com/sp12102001/Apology-Support-AI/raw/main/preview.png',
       builtWith: 'JavaScript, HTML, CSS, Node'
-    },
-    {
-      name: 'API Query Framework',
-      description: 'Framework for creating a static website that makes API queries using JavaScript and integrates ChatGPT.',
-      repoUrl: 'https://github.com/sp12102001/api-query-framework',
-      imageUrl: 'https://github.com/sp12102001/api-query-framework/raw/main/preview.png',
-      builtWith: 'JavaScript, HTML, CSS'
     }
-    
   ];
 
   return (
@@ -71,7 +70,7 @@ const projectData = [
             <div className="card-content">
               <h3>{project.name}</h3>
               <p className="description">{project.description}</p>
-              <a href={project.repoUrl} className="btn" target="_blank" rel="noopener noreferrer">View On GitHub</a>
+              <a href={project.repoUrl} className="btn" target="_blank" rel="noopener noreferrer">View Project on GitHub</a>
             </div>
             <div className="overlay">
               <p className="built-with"><strong>Built With:</strong> {project.builtWith}</p>
@@ -84,4 +83,3 @@ const projectData = [
 }
 
 export default Projects;
-
